@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Header from "./Header"
 import { SERVER_HOST } from "../config/global_constants"
 import "../css/AdminAlumPrincipal.css"
+import "../css/ListaActividades.css"
 
 // // Datos de prueba
 // function createData(nombre, key) {
@@ -116,7 +117,9 @@ export default class ListaActividades extends Component {
       let i = 0;
       pictos.push(
          <div key={i++}>
-            <input label="Search" onChange={this.onChange} placeholder="Buscar Actividad..." />
+            <div className="buscarActividad">
+               <input label="Search" onChange={this.onChange} placeholder="Buscar Actividad..." />
+            </div>
             <div>
                <table className="table table-bordered" >
                   <tbody>
@@ -151,10 +154,12 @@ export default class ListaActividades extends Component {
             <h1>Listado de actividades</h1>
             {this.state.error ? <div>Error: {this.state.error.message}</div> : null}
             {this.state.mounted ? null : <div> Cargando actividades... </div>}
-            {this.showTable()}
-            <div>
+            <div className="left">
+               {this.showTable()}
+               <div>
+               </div>
             </div>
-            <div className="Body">
+            <div className="right">
                <div className="botonesContainer">
                   <Link to="/AddActividad"><input id="addActividad" type="button" value="AÑADIR ACTIVIDAD" /></Link>
                   {/* <input id="modificar" type="button" className="" value="MODIFICAR TAREA" /> */}

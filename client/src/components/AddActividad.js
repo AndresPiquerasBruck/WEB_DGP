@@ -195,17 +195,25 @@ export default class AddActividad extends Component {
                      <label>Nombre de la actividad:</label><br />
                      <input type="text" id="newNameAct" name="newNameAct" placeholder="Nombre de la nueva actividad" onChange={this.handleChange} />
                   </div>
-                  <div>
-                     <label>Enlace a un vídeo:</label><br />
-                     <input type="text" id="enlaceVideo" name="enlaceVideo" placeholder="Enlace a un vídeo" onChange={this.handleChange} />
+                  <div id="halfLeft">
+                     <div>
+                        <label>Tipo de la actividad:</label><br />
+                        <input type="text" id="newTypeAct" name="newTypeAct" placeholder="Tipo de la nueva actividad" onChange={this.handleChange} />
+                     </div>
+                     <div>
+                        <label>Descripción:</label><br />
+                        <textarea id="newDesrAct" name="newDesrAct" placeholder="Descripción de la nueva actividad" onChange={this.handleChange} />
+                     </div>
                   </div>
-                  <div>
-                     <label>Enlace a un audio:</label><br />
-                     <input type="text" id="enlaceAudio" name="enlaceAudio" placeholder="Enlace a un audio" onChange={this.handleChange} />
-                  </div>
-                  <div>
-                     <label>Descripción:</label><br />
-                     <textarea id="newDesrAct" name="newDesrAct" placeholder="Descripción de la nueva actividad" onChange={this.handleChange} />
+                  <div id="halfRight">
+                     <div>
+                        <label>Enlace a un vídeo:</label><br />
+                        <input type="text" id="enlaceVideo" name="enlaceVideo" placeholder="Enlace a un vídeo" onChange={this.handleChange} />
+                     </div>
+                     <div>
+                        <label>Enlace a un audio:</label><br />
+                        <input type="text" id="enlaceAudio" name="enlaceAudio" placeholder="Enlace a un audio" onChange={this.handleChange} />
+                     </div>
                   </div>
                </form>
                <div>
